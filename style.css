@@ -83,30 +83,31 @@ body {
     line-height: 1.2;
 }
 
+/* Ajuste específico para Celular */
 @media (max-width: 600px) {
     .container {
         width: 100vw;
-        aspect-ratio: 928 / 1100; 
+        aspect-ratio: 928 / 1100; /* Ajuste leve para telas verticais */
     }
     .resIMG h2, .resDADOS p {
-        font-size: 2vw; 
+        font-size: 2vw; /* Garante leitura no celular */
     }
 }
 
 .btn-voltar {
     position: absolute;
-    bottom: 20px; 
-    right: 20px;  
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px;  /* Distância do canto direito */
     padding: 10px 20px;
-    background-color: #e6c74a; 
-    color: #2a75bb;       
+    background-color: #e6c74a; /* Amarelo Pokémon */
+    color: #2a75bb;           /* Azul Pokémon */
     border: 2px solid #15416b;
     border-radius: 8px;
     font-family: monospace;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
-    z-index: 10; 
+    z-index: 10; /* Garante que fique acima de tudo */
 }
 
 .btn-voltar:hover {
@@ -115,6 +116,7 @@ body {
     transform: scale(1.1);
 }
 
+/* No celular, vamos deixá-lo um pouco menor */
 @media (max-width: 600px) {
     .btn-voltar {
         bottom: 10px;
