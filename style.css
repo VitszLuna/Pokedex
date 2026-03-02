@@ -1,0 +1,48 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(1, 8, 21);
+  overflow: hidden;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+    margin: 15PX;
+  position: relative;
+  width: 100vw;   
+  height: 100vh;   
+  background-image: url("https://makerworld.bblmw.com/makerworld/model/DSM00000000494571/design/2024-06-13_d8a60b7ff20b1.jpg");
+  background-size: cover;       
+  background-position: center;  
+  background-repeat: no-repeat;
+}
+
+.resIMG img {
+  position: absolute;
+  width: 14%;
+  height: 28%;
+  left: 23%;
+  top: 35%;
+}
+
+.resTEXTO {
+  position: absolute;
+  left: 53%;
+  top: 34%;
+  width: 17%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resTEXTO h1 {
+  margin: 0;
+  font-size: 1.8vw;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  text-transform: uppercase;
+}

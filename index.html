@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEDEX - BUSCA</title>
+</head>
+<style>
+body {
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(1, 8, 21);
+    overflow: hidden;
+}
+
+.secao-entrada {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #161b22 0%, #010815 100%);
+}
+
+.card-busca {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    width: 300px;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.card-busca label {
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+#digitepoke {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.btn-gerar {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffcb05; 
+    color: #2a75bb;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-gerar:hover {
+    background-color: #2a75bb;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+</style>
+<body>
+
+    <div id="tela-busca" class="secao-entrada">
+        <div class="card-busca">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="Pokemon Logo" class="logo">
+            <label for="digitepoke">Ache seu pokemon:</label>
+            <input type="text" id="digitepoke" placeholder="Nome do Pokémon...">
+            <button class="btn-gerar" onclick="gerar()">GERAR POKÉMON</button>
+        </div>
+    </div>
+
+    <div id="tela-pokedex" class="container" style="display: none;">
+        <div class="resTEXTO">
+            <h1>PIKACHU</h1>
+        </div>
+        <div class="resIMG">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" alt="Pokemon">
+        </div>
+    </div>
+<script src="script.js"></script>
+
+</body>
+</html>
