@@ -1,48 +1,124 @@
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgb(1, 8, 21);
-  overflow: hidden;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(1, 8, 21);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .container {
-    margin: 15PX;
-  position: relative;
-  width: 100vw;   
-  height: 100vh;   
-  background-image: url("https://makerworld.bblmw.com/makerworld/model/DSM00000000494571/design/2024-06-13_d8a60b7ff20b1.jpg");
-  background-size: cover;       
-  background-position: center;  
-  background-repeat: no-repeat;
+    position: relative;
+    width: 95vw;
+    max-width: 900px; 
+    aspect-ratio: 928 / 784; 
+    background-image: url("https://makerworld.bblmw.com/makerworld/model/DSM00000000494571/design/2024-06-13_d8a60b7ff20b1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    container-type: inline-size; 
+  
+}
+.resIMG {
+    position: absolute;
+    left: 17.5%; 
+    top: 31%;    
+    width: 25.5%; 
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+}
+
+.resIMG h2 {
+    margin: 5px 0 0 0;
+    color: #d5d5d5; 
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: clamp(10px, 3.8cqi, 20px); 
+    text-align: center;
+    width: 100%;
 }
 
 .resIMG img {
-  position: absolute;
-  width: 14%;
-  height: 28%;
-  left: 23%;
-  top: 35%;
+    width: 65%;   
+    height: auto;
+    max-height: 70%;
+    object-fit: contain;
+    image-rendering: pixelated;
 }
 
-.resTEXTO {
-  position: absolute;
-  left: 53%;
-  top: 34%;
-  width: 17%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.resIMG h2 {
+    margin: 5px 30px 0 0;
+    color: #d5d5d5; 
+    font-family: monospace;
+    text-transform: uppercase;
+    font-size: 1.8cqi; 
 }
 
-.resTEXTO h1 {
-  margin: 0;
-  font-size: 1.8vw;
-  text-align: center;
-  color: white;
-  font-family: monospace;
-  text-transform: uppercase;
+.resDADOS {
+    position: absolute;
+    left: 54.5%;   
+    top: 32%;      
+    width: 26%;
+    height: 11%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.resDADOS p {
+    margin: 1px 0;
+    color: white;
+    font-family: monospace;
+    text-transform: uppercase;
+  
+    font-size: clamp(8px, 3cqi, 16px);
+    line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100vw;
+        aspect-ratio: 928 / 1100; 
+    }
+    .resIMG h2, .resDADOS p {
+        font-size: 2vw; 
+    }
+}
+
+.btn-voltar {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px;  
+    padding: 10px 20px;
+    background-color: #e6c74a; 
+    color: #2a75bb;       
+    border: 2px solid #15416b;
+    border-radius: 8px;
+    font-family: monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10; 
+}
+
+.btn-voltar:hover {
+    background-color: #2a75bb;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .btn-voltar {
+        bottom: 10px;
+        right: 10px;
+        font-size: 12px;
+    }
 }
